@@ -203,12 +203,9 @@
                             (一) 用户LV5(score>2999)及以上能发布图片,附件,媒体,默认管理用户名:limon,密码:password;<BR>\
                             (二) 可指定多个管理员,用户allow>100的为管理员;<BR>\
                             (三) 已知兼容的版本go 1.10以上,gin v1.4或以上,mysql 5.7 or sqlite 3;<BR><BR>\
-                            启动:<BR>\
-                            (一) cd to your main path then go run main.go<BR>\
-                            (二) 直接下载dist,并使用dist中的对应可执行命令\
-                            不足之处:\
-                            (一)仍有少量bug 和未模块化之内容;<BR><BR>\
-                            特别感谢: @fhst, @kdhly, 以及本项目和插件中所使用到的功能模块;和其它一些未列出的功能模块;<BR>'
+                            特别感谢: @fhst, @kdhly, 以及本项目中所使用到的插件和功能模块;以及其它一些未列出的功能模块;<BR><BR>\
+                            更多:<BR>\
+                            <a href="https://github.com/kdhly/golangbbs/blob/master/READMECN.md"  target=_blank>goto GitHub>></a><BR><BR>'
       },
       pgheader: {
         test: 'test'

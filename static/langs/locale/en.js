@@ -170,37 +170,28 @@
       },
       about: {
         content:'<BR><b>[golangbbs] Structure and Features:</b><BR><BR>\
-        Main project structures: golang + gin + vue + element ui + i18n;<BR>\
-                            Main plug-ins: ckedit + html5player + blueimp Gallery (music and photo manager)<BR>\
-                            Database: mysql or sqlite;<BR><BR>\
-                            1. localization of all resources;<BR>\
-                            2. prevent script injections attacks, text filtering;<BR>\
-                            3. Open and compact portable design;<BR>\
-                            4. This system function was more comprehensive and useful,There are relatively complete sharing functions and attachments when publishing,multimedia capabilities,Can be used as knowledge base and personal electronic notepad and personal media center and simple bbs;<BR>\
-                            5. You can set up a private blog;<BR>\
-                            6. Menu and blog categories online modification;<BR>\
-                            7. User information online modification;<BR>\
+        Main project structures: golang + gin + vue + element ui + i18n.<BR>\
+                            Main plug-ins: ckedit + html5player + blueimp Gallery (music and photo manager);<BR>\
+                            Database: mysql or sqlite.<BR><BR>\
+                            1. localization of all resources.<BR>\
+                            2. prevent script injections attacks, text filtering.<BR>\
+                            3. Open and compact portable design.<BR>\
+                            4. This system function was more comprehensive and useful,There are relatively complete sharing functions and attachments when publishing,multimedia capabilities,Can be used as knowledge base and personal electronic notepad and personal media center and simple bbs.<BR>\
+                            5. You can set up a private blog.<BR>\
+                            6. Menu and blog categories online modification.<BR>\
+                            7. User information online modification.<BR>\
                             8. Article and reply online modification.<BR>\
-                            9. Basic support for all kinds of mobile browsers <BR><BR>\
+                            9. Basic support for all kinds of mobile browsers. <BR><BR>\
                             Readme:<BR>\
-                            1. Users level LV5 (score > 2999) and above can publish pictures, attachments, media, and default management user name:limon,password:password;<BR>\
-                            2. Multiple administrators can be specified, and those with user allow > 100 are administrators;<BR>\
-                            3. You can adjust some parameters yourself in bbs_config_main_i18n.json file;<BR>\
-                            4. BbsUploadPath must have read and write permission;<BR>\
-                            5. The image directory you want to display should be in BbsUploadPath+"/Picture/photos", the directory beginning with my is not in the list, but it can still be displayed in the URL<BR>\
-                            6. Known compatible versions go 1.10 or above,gin v1.4 or above,mysql 5.7 or above or sqlite 3;<BR><BR>\
-                            How to use:<BR>\
-                            1. cd to your main path then go run main.go<BR>\
-                            2. Download the corresponding directory in dist directly and use the corresponding executable command of dist\
-                            3. The default database is sqlite3 , you can import .sql in mysql directory to your mysql database and change DbType to "mysql" if you want to use mysql.<BR><BR>\
-                            Question:<BR>\
-                            1. There are still a few bugs and non modular content,But it doesnot affect the experience;<BR><BR>\
-                            Give me a star<BR>\
-                            2. Old browsers are not supported because Vue uses the ES6 Promise object feature that older browsers cannot emulate, you can seach some plugin to compatible with it;<BR>\
-                            tips: If you have good projects or suggestions, we can help you realize it<BR><BR>\
-                            Give me a star<BR>\
-                            If you like or plan to use this project , please give me a star, thank you!<BR><BR>\
-                            Special thanks: @fhst, @kdhly, and all function modules used in the project structure and plug-ins; and other function module not listed;<BR>'
+                            1. Users level LV5 (score > 2999) and above can publish pictures, attachments, media, and default management user name:limon,password:password.<BR>\
+                            2. Multiple administrators can be specified, and those with user allow > 100 are administrators.<BR>\
+                            3. You can adjust some parameters yourself in bbs_config_main_i18n.json file.<BR>\
+                            4. BbsUploadPath must have read and write permission.<BR>\
+                            5. The image directory you want to display should be in BbsUploadPath+"/Picture/photos", the directory beginning with my is not in the list, but it can still be displayed in the URL.<BR>\
+                            6. Known compatible versions go 1.10 or above,gin v1.4 or above,mysql 5.7 or above or sqlite 3.<BR><BR>\
+                            Special thanks: @fhst, @kdhly, and all function modules and plug-ins used in the project structure. and other function module not listed.<BR><BR>\
+                            More<BR>\
+                            <a href="https://github.com/kdhly/golangbbs/blob/master/READMECN.md"  target=_blank>goto GitHub>></a><BR><BR>'
       },
       pgheader: {
         test: 'test'

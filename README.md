@@ -6,7 +6,9 @@ get and run golangbbs &emsp;&emsp;&emsp;&emsp;[(中文)](/READMECN.md)
 	
 	git clone https://github.com/kdhly/golangbbs.git  
 	cd golangbbs  
-	go run main.go  
+	go build  
+	chmod a+x golangbbs  
+	./golangbbs  
 
 ### components:
 
