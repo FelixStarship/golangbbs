@@ -69,12 +69,6 @@ license that can be found in the LICENSE file.*/}}
     <el-form-item :label="$t('common.content')" prop="ck-content" >
       <textarea name="content" id="ck-content" style="height:400px"></textarea>
     </el-form-item>
-    <el-form-item :label="$t('common.sort')" prop="categorytmp" style="display: none;">
-        <el-radio-group v-model="commonForm.categorytmp">
-        <el-radio :label="$t('common.man')" :value="$t('common.man')"></el-radio>
-        <el-radio :label="$t('common.woman')" :value="$t('common.woman')"></el-radio>
-       </el-radio-group>
-    </el-form-item>
     <el-form-item>
       <el-button type="primary" native-type="submit" @click="submitForm('commonForm')">[[[$t('publish.publishImmediately')]]]</el-button>
       <el-button @click="resetForm('commonForm')">[[[$t('common.reset')]]]</el-button>
@@ -164,6 +158,7 @@ var flist
         }
       },
       submitForm(formName) {
+        var ts=this
         if (editor.getData().toString().length<9) {
           this.$message({
              message: this.$t('publish.contentsnbl'),
@@ -189,7 +184,12 @@ var flist
                 formData.append(key, this.commonForm[key])
               }
             var categoryens=this.$refs['CateGoryStr'].value
-            var ts=this;
+            if (categoryens=="[]") {
+                mess=ts.$t('publish.selectsort')
+                dg1.dialogVisible1 = true;
+                return;
+            }
+            
             formData.append("attachment",flisttmp);
             try{formData.append("strshare", document.getElementById("strshare").value)}catch(e){formData.append("strshare", "")}
             formData.append("categoryen",categoryens[categoryens.length-1]);

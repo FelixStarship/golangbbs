@@ -96,9 +96,9 @@ var Main = {
           if (searchkey!="") {
                  //location.href="http://www.baidu.com/s?wd="+searchkey
                  if({{.LanguageStr}}.indexOf("cn")==-1){
-                  window.open("https://www.google.com/?q="+searchkey)
+                  window.open("https://www.google.com/search?q="+searchkey)
                  }else{
-                  window.open("https://www.baidu.com/?q="+searchkey)
+                  window.open("https://www.baidu.com/s?wd="+searchkey)
                  }
                  
           } else {

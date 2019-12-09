@@ -10,7 +10,7 @@ import (
 	"html/template"
 	"strconv"
 	"strings"
-
+	//"net/http"
 	"github.com/Sirupsen/logrus"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -54,7 +54,7 @@ type Bbs struct {
 	Category     string        `json:"category"`
 	Category_cn  string        `json:"category_cn"`
 	Content      template.HTML `json:"content"`
-	Memo_img     string        `json:"memo_img"`
+	Myphoto     string        `json:"myphoto"`
 	Member       string        `json:"member"`
 	Edit_time    string        `json:"edit_time"`
 	Edit_man     string        `json:"edit_man"`

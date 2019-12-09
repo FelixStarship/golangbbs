@@ -139,7 +139,7 @@ func EditBbsById(c *gin.Context) {
    id:=c.Param("id")
     id = strings.TrimSpace(id)
     id = configs.EscapeWords(id)
-    rows, err := configs.Db.Query("select a.id,a.title,a.author,a.add_time,a.reply_count,a.raise_count,a.categoryenall,a.content,a.memo_img,a.Edit_man,a.edit_history,a.read_count,a.mylink,a.mymedia,a.reader,a.isprivate,a.attachment,b.headicon,b.blog,b.score from bbs a LEFT JOIN myuser b on a.author=b.myusername where a.id=?",id)
+    rows, err := configs.Db.Query("select a.id,a.title,a.author,a.add_time,a.reply_count,a.raise_count,a.categoryenall,a.content,a.myphoto,a.Edit_man,a.edit_history,a.read_count,a.mylink,a.mymedia,a.reader,a.isprivate,a.attachment,b.headicon,b.blog,b.score from bbs a LEFT JOIN myuser b on a.author=b.myusername where a.id=?",id)
     if err != nil {
         configs.LogErr(err)
     }
@@ -154,7 +154,7 @@ func EditBbsById(c *gin.Context) {
         var raise_count sql.NullString
         var categoryenall sql.NullString
         var content sql.NullString
-        var memo_img sql.NullString
+        var myphoto sql.NullString
         var edit_man sql.NullString
         var edit_history sql.NullString
         var read_count sql.NullString
@@ -166,7 +166,7 @@ func EditBbsById(c *gin.Context) {
         var userheadicon sql.NullString
         var userblog sql.NullBool
         var userscore sql.NullFloat64
-        if err = rows.Scan(&id,&title, &author, &add_time,&reply_count,&raise_count,&categoryenall,&content,&memo_img,&edit_man,&edit_history,&read_count,&link,&media,&reader,&isprivate,&attachment,&userheadicon,&userblog,&userscore); err != nil {
+        if err = rows.Scan(&id,&title, &author, &add_time,&reply_count,&raise_count,&categoryenall,&content,&myphoto,&edit_man,&edit_history,&read_count,&link,&media,&reader,&isprivate,&attachment,&userheadicon,&userblog,&userscore); err != nil {
             configs.LogErr(err)
         }
         if id.Valid {
@@ -178,7 +178,7 @@ func EditBbsById(c *gin.Context) {
             h["Raise_count"] = raise_count.String
             h["Categoryenall"] = categoryenall.String
             h["Content"] = configs.UnEscapeWords(content.String)
-            h["mo_img"] = memo_img.String            
+            h["myphoto"] = myphoto.String            
             h["Edit_man"] = edit_man.String
             h["Edit_history"] = edit_history.String
             h["Read_count"] = read_count.String

@@ -102,7 +102,7 @@ func GetBbsById(c *gin.Context) {
     category = strings.TrimSpace(category)
     category = configs.EscapeWords(category)
     //SELECT a.id, a.title,b.headicon FROM bbs a LEFT JOIN myuser b on a.author=b.myusername where a.id=1148
-    rows, err := configs.Db.Query("select a.id,a.title,a.author,a.add_time,a.reply_count,a.raise_count,a.Categoryen,a.content,a.memo_img,a.Edit_man,a.edit_history,a.read_count,a.mylink,a.mymedia,a.reader,a.isprivate,a.attachment,b.headicon,b.blog,b.score from bbs a LEFT JOIN myuser b on a.author=b.myusername where a.allow>0 and a.id=?",id)
+    rows, err := configs.Db.Query("select a.id,a.title,a.author,a.add_time,a.reply_count,a.raise_count,a.Categoryen,a.content,a.myphoto,a.Edit_man,a.edit_history,a.read_count,a.mylink,a.mymedia,a.reader,a.isprivate,a.attachment,b.headicon,b.blog,b.score from bbs a LEFT JOIN myuser b on a.author=b.myusername where a.allow>0 and a.id=?",id)
     if err != nil {
         configs.LogErr(err)
     }
@@ -121,7 +121,7 @@ func GetBbsById(c *gin.Context) {
         var raise_count sql.NullFloat64
         var categoryen sql.NullString
         var content sql.NullString
-        var memo_img sql.NullString
+        var myphoto sql.NullString
         var edit_man sql.NullString
         var edit_history sql.NullString
         var read_count sql.NullString
@@ -133,7 +133,7 @@ func GetBbsById(c *gin.Context) {
         var userheadicon sql.NullString
         var userblog sql.NullBool
         var userscore sql.NullFloat64
-        if err = rows.Scan(&id,&title, &author, &add_time,&reply_count,&raise_count,&categoryen,&content,&memo_img,&edit_man,&edit_history,&read_count,&link,&media,&reader,&isprivate,&attachment,&userheadicon,&userblog,&userscore); err != nil {
+        if err = rows.Scan(&id,&title, &author, &add_time,&reply_count,&raise_count,&categoryen,&content,&myphoto,&edit_man,&edit_history,&read_count,&link,&media,&reader,&isprivate,&attachment,&userheadicon,&userblog,&userscore); err != nil {
         	configs.LogErr(err)
         }
         if id.Valid {
@@ -145,7 +145,7 @@ func GetBbsById(c *gin.Context) {
             h["Raise_count"] = raise_count.Float64
             h["Category"] = categoryen.String
             h["Content"] = Tpl(configs.UnEscapeWords(content.String))
-            h["mo_img"] = memo_img.String            
+            h["myphoto"] = myphoto.String            
             h["Edit_man"] = edit_man.String
             h["Edit_history"] = Tpl(configs.UnEscapeWords(edit_history.String))
             h["Read_count"] = read_count.String
