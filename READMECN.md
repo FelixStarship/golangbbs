@@ -95,7 +95,7 @@ QQ群：920788836
 如果你喜欢或计划使用这个项目，请Give me a star，谢谢！
 
 ## Donation
-如果本项目让你玩得很Happy，你可以通过以下链接捐款，以更好地支持本团队和项目的发展: <br /><br />
+如果本项目让你玩得很Happy，你可以通过以下链接捐款，以更好地支持本项目和团队的发展: <br /><br />
 ![10](/static/img/donation/alipay.jpg)   <br /><br /> <br />
 
 ![10](/static/img/donation/weixin.jpg)    <br /><br /> <br />
