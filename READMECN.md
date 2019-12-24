@@ -82,7 +82,7 @@ golang + gin + vue + element ui + i18n;
 2. 旧浏览器不受支持，因为Vue使用的ES6 Promise对象功能是旧浏览器无法模拟的，您可以查找一些插件来与之兼容;  
 
 ## 联系作者
-mail: 1269866868@qq.com,golangbbs@gmail.com  QQ群：920788836
+mail: 1269866868@qq.com,golangbbs@gmail.com  QQ群：920788836  
 或访问: http://www.golangbbs.com/?page=bbs&category=XWdNEvaL_go  
 
 ## tips:
