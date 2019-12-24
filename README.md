@@ -94,7 +94,7 @@ If you have good projects or suggestions, we can help you realize it
 If you like or plan to use this project,please give me a star, thank you!
 
 ## Donation
-If golangbbs helps you solve many problems, you can donate through the following link to support golangbbs:
+If this project makes you feel very happy, you can donate through the following link to support golangbbs:
 ##### https://paypal.me/golangbbs
 
 ## Screenshots ：<br /><br />
