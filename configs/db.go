@@ -27,7 +27,8 @@ if BbsConfigs.DbType=="mysql" && BbsConfigs.Precompile != 1 {
     if err != nil {
         LogErr(err)
     }
-    Db.SetMaxIdleConns(10000)
+    db.SetMaxOpenConns(2000)
+    db.SetMaxIdleConns(1000)
     var version string
 	Db.QueryRow("SELECT VERSION()").Scan(&version)
 	logrus.Info("Connected to Mysql ok, version: "+version)
