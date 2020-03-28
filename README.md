@@ -1,4 +1,4 @@
-# quick start
+﻿# quick start
 
 get and run golangbbs &emsp;&emsp;&emsp;&emsp;[(中文)](/READMECN.md)
 
@@ -94,7 +94,7 @@ If you have good projects or suggestions, we can help you realize it
 If you like or plan to use this project,please give me a star, thank you!
 
 ## Donation
-If this project makes you feel very happy, You can donate to the following link to better support the development of this project and the team:
+If this project makes you feel good, You can donate to the following link to better support the development of this project and the team:
 ##### https://paypal.me/golangbbs
 
 ## Screenshots ：<br /><br />
